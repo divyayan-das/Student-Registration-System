@@ -22,7 +22,7 @@ A full-stack web application for managing student course registration and grade 
 
 ## Database Design
 
-Normalized relational model: `department`, `faculty`, `student`, `course`, `course_prerequisite`, `enrollment`, `app_user`. The full DDL — including `register_student_for_course` and `assign_grade` procedures, integrity triggers, and the indexing strategy - is in [`database/mysql_schema.sql`](database/mysql_schema.sql).
+Normalized relational model: `department`, `faculty`, `student`, `course`, `course_prerequisite`, `enrollment`, `app_user`. The full DDL; including `register_student_for_course` and `assign_grade` procedures, integrity triggers, and the indexing strategy - is in [`database/mysql_schema.sql`](database/mysql_schema.sql).
 
 ## Run Locally
 
