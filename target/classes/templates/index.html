@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head th:replace="~{layout :: head('University Academic Hub')}"></head>
+<body>
+<nav th:replace="~{layout :: nav}"></nav>
+<main class="container py-5">
+    <section class="hero-card p-5 mb-4">
+        <div class="row g-4 align-items-center">
+            <div class="col-lg-7">
+                <p class="eyebrow mb-3">University Registration Platform</p>
+                <h1 class="display-5 fw-semibold">Student registration and grade management in one protected academic system.</h1>
+                <p class="lead mt-3">This web-based platform centralizes student profiles, faculty data, course offerings, enrollment states, grades, validation rules, and report access for administrators, instructors, and students.</p>
+                <div class="d-flex flex-wrap gap-3 mt-4">
+                    <a class="btn btn-dark btn-lg" th:href="@{/login}">Open Secure Login</a>
+                </div>
+            </div>
+            <div class="col-lg-5">
+                <div class="row g-3">
+                    <div class="col-6" th:each="metric : ${metrics}">
+                        <div class="stat-tile">
+                            <div class="small text-secondary" th:text="${metric.key}">Students</div>
+                            <div class="display-6 fw-semibold" th:text="${metric.value}">0</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="row g-4">
+        <div class="col-md-4">
+            <a class="portal-link h-100" th:href="@{/login}">
+                <div class="fs-2 mb-2">Admin</div>
+                <h3 class="h4">Administrator Portal</h3>
+                <p>Monitor departments, courses, users, enrollments, and the normalized academic dataset.</p>
+            </a>
+        </div>
+        <div class="col-md-4">
+            <a class="portal-link h-100" th:href="@{/login}">
+                <div class="fs-2 mb-2">Faculty</div>
+                <h3 class="h4">Faculty Portal</h3>
+                <p>Review assigned courses, inspect rosters, and submit grades through protected workflow screens.</p>
+            </a>
+        </div>
+        <div class="col-md-4">
+            <a class="portal-link h-100" th:href="@{/login}">
+                <div class="fs-2 mb-2">Student</div>
+                <h3 class="h4">Student Portal</h3>
+                <p>Register for courses, view academic outcomes, and track semester workload with validation feedback.</p>
+            </a>
+        </div>
+    </section>
+    
+</main>
+</body>
+</html>
